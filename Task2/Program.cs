@@ -3,7 +3,7 @@
 double number(double x1,double y1, double z1, double x2, double y2, double z2)
 {
     double result = 0;
-    if(x1 == x2 && y1 == y2)
+    if(x1 == x2 && y1 == y2 && z1 == z2)
     {
         return result;
     }

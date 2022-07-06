@@ -1,16 +1,31 @@
-﻿Console.WriteLine("Введите пятизначное число");
-string num = Console.ReadLine();
-int i = num.Length;
+﻿// Задание 19
 
-if(i == 5)
+Console.WriteLine("Введите пятизначное число: ");
+string val = Console.ReadLine();
+
+int number;
+
+if (int.TryParse(val, out number))
 {
-    if(num[0] == num[i - 1] && num[1] == num[i - 2])
-    {
-        Console.WriteLine("Число является полиндромом");
-    }
-    else
-    {
-        Console.WriteLine("Число не является полиндромом"); 
-    }
+if (number.ToString().Length == 5)
+{
+char[] revtext = number.ToString().ToCharArray();
+
+Array.Reverse(revtext);
+string reversedtext = new string(revtext);
+if (number.ToString() == reversedtext)
+{
+Console.WriteLine("Polindrome");
+}
+else
+{
+Console.WriteLine("Not a Polindrome");
+}
+}
+else Console.WriteLine("Enter number lenght != 5");
+}
+else
+{
+Console.WriteLine("Not Number");
 }
 
