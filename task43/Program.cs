@@ -10,11 +10,6 @@ double numB2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите значение k2");
 double numK2 = Convert.ToInt32(Console.ReadLine());
 
-
 double x = -(numB1 - numB2) / (numK1 - numK2);
 double y = numK1 * x + numB1;
- 
-x = Math.Round(x, 3);
-y = Math.Round(y, 3);
- 
 Console.WriteLine($"Пересечение в точке: ({x};{y})");
